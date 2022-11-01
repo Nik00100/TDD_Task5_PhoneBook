@@ -13,6 +13,9 @@ public class PhoneBook {
 
     //поиск контакта по номеру телефона
     public Contact findByNumber(String mobileNumber) {
-        return null;
+        //поиск наименьшего элемента больше или равного элемента с телефоном mobileNumber
+        //контакты упорядочены по номерам телефонов
+        Contact result = contacts.ceiling(new Contact(null, mobileNumber));
+        return result.getMobileNumber().equals(mobileNumber)? result : null;
     }
 }
