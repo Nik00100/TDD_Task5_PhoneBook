@@ -10,8 +10,9 @@ public class PhoneBookTest {
     public void add() {
         PhoneBook phoneBook = new PhoneBook();
         Set<Contact> contacts = new TreeSet<>();
-        Contact contact = new Contact("Сергей", "+7(999)-999-99-99");
-        assertEquals(contacts.add(contact),phoneBook.add(contact));
+        String name ="Сергей";
+        String phoneNumber = "+7(999)-999-99-99";
+        assertEquals(contacts.add(new Contact(name, phoneNumber)),phoneBook.add(name,phoneNumber));
     }
 
 }
