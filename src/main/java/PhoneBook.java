@@ -45,7 +45,14 @@ public class PhoneBook {
 
     //поиск и вывод контактов по группе
     public List<Contact> showContactsInGroup(String groupName) {
-
-        return null;
+        List<Contact> result = null;
+        if (groupMap.containsKey(groupName)) {
+            System.out.println(String.format("В группе %s количество контактов %d : %s",
+                    groupName, groupMap.get(groupName).size(), addGroup(groupName)));
+            result = groupMap.get(groupName);
+        } else {
+            System.out.println(String.format("Группы %s нет в справочнике.", groupName));
+        }
+        return result;
     }
 }
