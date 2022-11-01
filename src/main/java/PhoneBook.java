@@ -2,13 +2,25 @@ import java.util.*;
 
 public class PhoneBook {
 
+    //контакты в группах
+    private Map<String, List<Contact>> groupMap = new HashMap<>();
     //список всех контактов
     private TreeSet<Contact> contacts = new TreeSet<>();
 
     //создание группы контактов
     public List<Contact> addGroup(String groupName) {
+        List<Contact> contactGroup = null;
 
-        return null;
+        //проверка на существование группы
+        if (groupMap.containsKey(groupName)) {
+            contactGroup = groupMap.get(groupName);
+        }
+        //создание новой группы
+        else {
+            contactGroup = new ArrayList<>();
+            groupMap.put(groupName, contactGroup);
+        }
+        return contactGroup;
     }
 
     //добавление нового контакта
