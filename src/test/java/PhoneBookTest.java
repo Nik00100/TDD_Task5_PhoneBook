@@ -24,4 +24,11 @@ public class PhoneBookTest {
         assertEquals(name,phoneBook.findByNumber(phoneNumber).getName());
     }
 
+    @Test
+    public void addGroup() {
+        PhoneBook phoneBook = new PhoneBook();
+        String groupName = "Работа";
+        assertNotNull(phoneBook.addGroup(groupName));
+    }
+
 }

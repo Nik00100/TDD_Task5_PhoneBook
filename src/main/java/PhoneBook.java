@@ -5,6 +5,12 @@ public class PhoneBook {
     //список всех контактов
     private TreeSet<Contact> contacts = new TreeSet<>();
 
+    //создание группы контактов
+    public List<Contact> addGroup(String groupName) {
+
+        return null;
+    }
+
     //добавление нового контакта
     public boolean add(String name, String mobileNumber) {
         Contact contact = new Contact(name, mobileNumber);
