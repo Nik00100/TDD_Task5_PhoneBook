@@ -24,9 +24,10 @@ public class PhoneBook {
     }
 
     //добавление нового контакта
-    public boolean add(String name, String mobileNumber) {
+    public Contact add(String name, String mobileNumber) {
         Contact contact = new Contact(name, mobileNumber);
-        return contacts.add(contact);
+        contacts.add(contact);
+        return contact;
     }
 
     //поиск контакта по номеру телефона
