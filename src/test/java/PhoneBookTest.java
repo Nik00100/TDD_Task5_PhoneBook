@@ -15,4 +15,13 @@ public class PhoneBookTest {
         assertEquals(contacts.add(new Contact(name, phoneNumber)),phoneBook.add(name,phoneNumber));
     }
 
+    @Test
+    public void findByNumber() {
+        PhoneBook phoneBook = new PhoneBook();
+        String name ="Сергей";
+        String phoneNumber = "+7(999)-999-99-99";
+        phoneBook.add(name,phoneNumber);
+        assertEquals(name,phoneBook.findByNumber(phoneNumber).getName());
+    }
+
 }

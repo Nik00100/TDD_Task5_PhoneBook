@@ -10,4 +10,9 @@ public class PhoneBook {
         Contact contact = new Contact(name, mobileNumber);
         return contacts.add(contact);
     }
+
+    //поиск контакта по номеру телефона
+    public Contact findByNumber(String mobileNumber) {
+        return null;
+    }
 }
