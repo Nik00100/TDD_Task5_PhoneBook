@@ -31,4 +31,13 @@ public class PhoneBookTest {
         assertNotNull(phoneBook.addGroup(groupName));
     }
 
+    @Test
+    public void addContactToGroup(){
+        PhoneBook phoneBook = new PhoneBook();
+        String groupName = "Работа";
+        Contact Sergey = new Contact("Сергей", "+7(999)-999-99-99");
+
+        assertEquals(phoneBook.addGroup(groupName).add(Sergey),phoneBook.addContactToGroup(groupName,Sergey));
+    }
+
 }

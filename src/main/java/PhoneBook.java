@@ -36,4 +36,11 @@ public class PhoneBook {
         Contact result = contacts.ceiling(new Contact(null, mobileNumber));
         return result.getMobileNumber().equals(mobileNumber)? result : null;
     }
+
+    //добавление контакта в группу
+    public boolean addContactToGroup(String groupName, Contact contact) {
+        return false;
+    }
+
+
 }
