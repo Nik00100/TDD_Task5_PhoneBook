@@ -39,7 +39,8 @@ public class PhoneBook {
 
     //добавление контакта в группу
     public boolean addContactToGroup(String groupName, Contact contact) {
-        return false;
+        List<Contact> contactGroup = addGroup(groupName);
+        return contactGroup.add(contact);
     }
 
 
