@@ -40,4 +40,13 @@ public class PhoneBookTest {
         assertEquals(phoneBook.addGroup(groupName).add(Sergey),phoneBook.addContactToGroup(groupName,Sergey));
     }
 
+    @Test
+    public void showContactsInGroup(){
+        PhoneBook phoneBook = new PhoneBook();
+        String groupName = "Работа";
+        Contact Sergey = new Contact("Сергей", "+7(999)-999-99-99");
+        phoneBook.addContactToGroup(groupName,Sergey);
+        assertEquals(Sergey.getName(),phoneBook.showContactsInGroup(groupName).get(0).getName());
+    }
+
 }

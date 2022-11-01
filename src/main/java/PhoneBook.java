@@ -43,5 +43,9 @@ public class PhoneBook {
         return contactGroup.add(contact);
     }
 
+    //поиск и вывод контактов по группе
+    public List<Contact> showContactsInGroup(String groupName) {
 
+        return null;
+    }
 }
